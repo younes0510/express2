@@ -8,21 +8,21 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use((req, res,next) => {
+app.use((req, res, next) => {
     next();
 });
 
 app.use((req, res, next) => {
     const date = new Date().getHours();
 
-    if(date>=9  && date<=17) {
-        
+    if (date < 9 || date > 17) {
+
         res.status(403).sendFile(path.join(__dirname, 'pages', 'disponible.html'));
     }
     else {
         next();
     }
-}); 
+});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'welcom.html'));
