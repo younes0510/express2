@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body  class="bg-[rgb(246,230,217)] ">
+    
+     <header>
+        <nav class="flex justify-between max-w-screen-lg mx-auto">
+            <h2 class="text-3xl  font-serif pt-7">Style Elégant</h2>
+            <ul class="flex gap-10">
+                <li class="font-bold tracking-wide underline hover:bg-white pt-7"><a href="/">Home</a></li>
+                <li class="font-bold tracking-wide underline hover:bg-white pt-7 "><a href="/article">article </a></li>
+                <li class="font-bold tracking-wide underline hover:bg-white pt-7"><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+     <div  class="w-screen flex justify-center mt-20">
+
+         <form class="shadow-xl rounded-lg p-10 border flex flex-col gap-5 w-[500px]" action="/contact" method="post">
+             <h1 class="text-center font-semibold text-3xl">Contact Us</h1>
+             <input name="name" class="border px-4 py-1.5 border-black rounded-lg" type="text" placeholder="Name">
+             <input name="email" class="border px-4 py-1.5 border-black rounded-lg" type="text" placeholder="Email">
+             <input name="password" class="border px-4 py-1.5 border-black rounded-lg" type="text" placeholder="password">
+             <textarea name="message" class="border px-4 py-1.5 border-black rounded-lg" placeholder="Message"></textarea>
+             <button class="bg-black text-white px-4 py-1.5 rounded-lg"> Send</button>
+         </form>
+
+        
+</body>
+</html>
